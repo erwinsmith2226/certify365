@@ -1,7 +1,7 @@
 {
-	"name": "certify365-temp",
+	"name": "certify365",
 	"private": true,
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
@@ -9,7 +9,11 @@
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate": "drizzle-kit migrate",
+		"db:push": "drizzle-kit push",
+		"db:studio": "drizzle-kit studio"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^7.0.0",
@@ -18,6 +22,8 @@
 		"@tailwindcss/forms": "^0.5.11",
 		"@tailwindcss/typography": "^0.5.19",
 		"@tailwindcss/vite": "^4.1.18",
+		"@types/node": "^25.2.0",
+		"drizzle-kit": "^0.31.8",
 		"svelte": "^5.48.2",
 		"svelte-check": "^4.3.5",
 		"tailwindcss": "^4.1.18",
@@ -25,6 +31,18 @@
 		"vite": "^7.3.1"
 	},
 	"dependencies": {
-		"lucide-svelte": "^0.563.0"
+		"@anthropic-ai/sdk": "^0.72.1",
+		"@auth/drizzle-adapter": "^1.11.1",
+		"@auth/sveltekit": "^1.11.1",
+		"@aws-sdk/client-s3": "^3.981.0",
+		"@aws-sdk/s3-request-presigner": "^3.981.0",
+		"dotenv": "^17.2.3",
+		"drizzle-orm": "^0.45.1",
+		"lucide-svelte": "^0.563.0",
+		"openai": "^6.17.0",
+		"postgres": "^3.4.8",
+		"puppeteer": "^24.36.1",
+		"resend": "^6.9.1",
+		"zod": "^4.3.6"
 	}
 }
